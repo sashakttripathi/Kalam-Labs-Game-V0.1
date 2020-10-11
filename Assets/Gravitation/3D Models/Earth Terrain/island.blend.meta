@@ -7,8 +7,63 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Grass
+    second: {fileID: 2100000, guid: e1c08f2b6d3503e4abbca2ea55036e75, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Material
     second: {fileID: 2100000, guid: 4d823c62845160343b9d786dd933dcc4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 04b0046ed45c45144bc8a338cfb148e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plant 1
+    second: {fileID: 2100000, guid: 3ebe9d7f8fabde244a2192d402dc2ffd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plant 2
+    second: {fileID: 2100000, guid: d7b9d1590c191544db1adb8461e5c2f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plant 3
+    second: {fileID: 2100000, guid: d410040361daa35448ff40fea68dc935, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Road
+    second: {fileID: 2100000, guid: 558354dc1236bcc4db597c69ed42a458, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rock
+    second: {fileID: 2100000, guid: 0c04c18a4947cb14087ae3b4bbd43713, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sand
+    second: {fileID: 2100000, guid: 57c6680bf1161ba41ad8957bb6a662c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stone 1
+    second: {fileID: 2100000, guid: 25eeb1822209f154595e015bb24ad344, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stone 2
+    second: {fileID: 2100000, guid: 7cce24d5998ff704e93aa9b667991596, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stone 3
+    second: {fileID: 2100000, guid: 65c29ef64bd72ff4e97713d1ccd30d92, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
