@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
 /*        float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 */
+
         float h = Controller.Horizontal;
         float v = Controller.Vertical;
 
@@ -53,7 +54,7 @@ public class PlayerController : MonoBehaviour
         if (_characterController.isGrounded)
         {
             _animator.SetFloat("Velocity", move.magnitude);
-            Debug.Log(_animator.GetFloat("Velocity"));
+            //Debug.Log(_animator.GetFloat("Velocity"));
             _moveDir = transform.forward * move.magnitude;
 
             _moveDir *= Speed;
