@@ -7,8 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Fence
+    second: {fileID: 2100000, guid: e4ece6412f020f04d94d6a6d5d08fb21, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gate
+    second: {fileID: 2100000, guid: 5315d4fd8817b274294be7723b9b08ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Glass
     second: {fileID: 2100000, guid: e516cd00b02407248ae2717833a10ae9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass Fence
+    second: {fileID: 2100000, guid: ee06da94152090740bd026ea5664d245, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -24,6 +39,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Moon
     second: {fileID: 2100000, guid: 4f55f515dd62e514694315cf3deeacb7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Road Moon
+    second: {fileID: 2100000, guid: 13546338ca8f23a46a39402310b1e806, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -56,7 +76,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1

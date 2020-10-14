@@ -7,8 +7,28 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Free Drawer  textures
+    second: {fileID: 2100000, guid: 584907ae705f3c14ab7f6db65cecaf5c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Grass
     second: {fileID: 2100000, guid: e1c08f2b6d3503e4abbca2ea55036e75, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_ladder
+    second: {fileID: 2100000, guid: 7cab8e9b994cfa142aac48b8a5ff1657, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat
+    second: {fileID: 2100000, guid: 0b346b5b5fa741246852d08f3e6578c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.1
+    second: {fileID: 2100000, guid: 54e238420b311ee47a3cc7ecf44fdec9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -17,8 +37,28 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 6394ddf1d9a2b11499ef0efc7d5e8482, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.006
+    second: {fileID: 2100000, guid: 2e2ae9acc5945bf4ba8cd3b331a14870, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2
+    second: {fileID: 2100000, guid: 617b6a73f3e18cd4cb9b34d84e407972, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NOTING
+    second: {fileID: 2100000, guid: fedef5a5ccc1c1c4bac4834a4262f50a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: No Name
-    second: {fileID: 2100000, guid: 04b0046ed45c45144bc8a338cfb148e8, type: 2}
+    second: {fileID: 2100000, guid: a3390e5d648a9e941bf1d17d2f169d33, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -64,6 +104,31 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Stone 3
     second: {fileID: 2100000, guid: 65c29ef64bd72ff4e97713d1ccd30d92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tower Floor
+    second: {fileID: 2100000, guid: 0f914af8961e2b2428ceb4c1ad99db3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tower Outside Floor
+    second: {fileID: 2100000, guid: 698993da97d409c45ba0fc12ac65d8d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_texture
+    second: {fileID: 2100000, guid: 33bb37d76a670b14987531d3680072c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: door_enter
+    second: {fileID: 2100000, guid: b13e4e4a53300ad4bafd77557d565959, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: window
+    second: {fileID: 2100000, guid: edf04d1d28833284a8ee3945b09be143, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -96,7 +161,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
