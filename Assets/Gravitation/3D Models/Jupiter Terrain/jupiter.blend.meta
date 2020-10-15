@@ -7,8 +7,33 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: ce976db2d4e85e848bd954853be2de96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Box
+    second: {fileID: 2100000, guid: 1418a9bf244fc1d469345f76e300b495, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door Jupiter
+    second: {fileID: 2100000, guid: f5e6850b84b507a458cac0a295528515, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fence Jupiter
+    second: {fileID: 2100000, guid: 2777b31ce3b868f4aadc6687fa39b8f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Glass
     second: {fileID: 2100000, guid: d3f9d28e15bc5554ba52f73435f40255, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass Jupiter
+    second: {fileID: 2100000, guid: ee337c6795d08fa44950085537ed9d5c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -39,6 +64,21 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Plant
     second: {fileID: 2100000, guid: 1f99387a214b8ca419dee204aee0aa0f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Screen
+    second: {fileID: 2100000, guid: af08248649b4e064d879ce49d8fa0197, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Table
+    second: {fileID: 2100000, guid: 604f05a6cf5699945b354a22e8f31814, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: jupiter Road
+    second: {fileID: 2100000, guid: 4e4f16ea698093442874da021574813e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -76,7 +116,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
