@@ -44,12 +44,12 @@ public class GripMeter : MonoBehaviour
             }
         }
         lastreading = currentReading;
-        if (currentReading > 0)
+        if (currentReading >= rateDecrease)
         {
             currentReading -= rateDecrease;
         }
         
-        if (Input.GetMouseButtonDown(0) && currentReading < 17)
+        if (Input.GetMouseButtonDown(0) && currentReading < 20 - rateIncrease)
         {
             currentReading += rateIncrease;
         }
