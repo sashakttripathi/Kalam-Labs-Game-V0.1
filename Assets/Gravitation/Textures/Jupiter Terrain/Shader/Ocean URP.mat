@@ -24,7 +24,7 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: fbf1b0456f77e8641bea9607cc2b37b0, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -95,23 +95,23 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     - _depthDistance: 0.9
-    - _depthDistance1234: 0.34
+    - _depthDistance1234: 0.6
     - _depthStrength: 1.2
-    - _depthStrength12223: 2.82
+    - _depthStrength12223: 2.8
     - _normalStrength: 1
     - _normalStrength1234: 1
     - _normalTiling: 1
     - _normalTiling1234: 5
     - _panSpeed: 0.02
-    - _panSpeed1234: 0.15
-    - _refractStrength123: 0.09
+    - _panSpeed1234: 0.1
+    - _refractStrength123: 1
     - _refract_Strength: 0.13
-    - _strength1234: -0.38
+    - _strength1234: -0.32
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _bottomColor1234: {r: 0.18836774, g: 0.5503655, b: 0.7830189, a: 1}
-    - _topColor1234: {r: 0.0047169924, g: 0.723852, b: 1, a: 1}
+    - _bottomColor1234: {r: 0, g: 0.8584906, b: 0.7498253, a: 1}
+    - _topColor1234: {r: 0, g: 0.43849897, b: 1, a: 1}
   m_BuildTextureStacks: []

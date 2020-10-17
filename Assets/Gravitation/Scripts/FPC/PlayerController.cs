@@ -11,12 +11,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public FixedJoystick Controller;
 
-
-
-    [SerializeField]
-    private GameObject ClimbWall, ClimbCheckGO;
-
     public float Speed = 5.0f, jumpspeed = 5.0f;
+
+    public GameObject ClimbStair;
 
     public float RotationSpeed = 240.0f;
 
@@ -74,17 +71,14 @@ public class PlayerController : MonoBehaviour
             _moveDir.y = jumpspeed;
         }
         
-        if (!ClimbCheckGO.GetComponent<ClimbCheck>().climb)
-        {
-            _moveDir.y -= Gravity * Time.deltaTime;
-            _characterController.Move(_moveDir * Time.deltaTime);
-        }
-        else
-        {
-            transform.Translate(ClimbCheckGO.GetComponent<ClimbCheck>().hit.transform.position);
-        }
+        //_moveDir.y -= Gravity * Time.deltaTime;
+        _characterController.Move(_moveDir * Time.deltaTime);
 
-        
+        if (Input.GetKey("space"))
+        {
+            //transform.Translate(ClimbStair.transform.position);
+            transform.position = Vector3.MoveTowards(transform.position, ClimbStair.transform.position, 3);
+        }
 
     }
 }

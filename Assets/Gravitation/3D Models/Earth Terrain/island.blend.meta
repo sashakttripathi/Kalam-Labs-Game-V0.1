@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Fence
+    second: {fileID: 2100000, guid: 2356fec402ff16c4dbfdcc5722fced62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Free Drawer  textures
     second: {fileID: 2100000, guid: 584907ae705f3c14ab7f6db65cecaf5c, type: 2}
   - first:
@@ -14,6 +19,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Grass
     second: {fileID: 2100000, guid: e1c08f2b6d3503e4abbca2ea55036e75, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Island
+    second: {fileID: 2100000, guid: ee69fc31006078149adb4a7581a077ff, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
