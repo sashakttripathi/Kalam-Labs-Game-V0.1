@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
 
     private float Gravity = 20.0f;
 
+    public bool climbArea = false;
+
     private Vector3 _moveDir = Vector3.zero;
 
     // Use this for initialization
@@ -59,26 +61,56 @@ public class PlayerController : MonoBehaviour
             //Debug.Log(_animator.GetFloat("Velocity"));
             _moveDir = transform.forward * move.magnitude;
             _animator.ResetTrigger("jump");
+            _animator.ResetTrigger("Hang");
 
             _moveDir *= Speed;
 
         }
         if(Input.GetKey("space") && _characterController.isGrounded)
         {
-            //this.transform.LookAt(ClimbWall.transform);
-            //transform.rotation = Quaternion.Euler (0, transform.rotation.y, 0);
-            _animator.SetTrigger("jump");
-            _moveDir.y = jumpspeed;
+            if (climbArea)
+            {
+                this.transform.LookAt(ClimbStair.transform);
+                transform.rotation = Quaternion.Euler (0, transform.rotation.y, 0);
+                _animator.SetTrigger("Hang");                
+            }
+            else
+            {
+                _animator.SetTrigger("jump");
+            }
+            //_moveDir.y = jumpspeed;
         }
-        
-        //_moveDir.y -= Gravity * Time.deltaTime;
+        if (!climbArea)
+        {
+            _moveDir.y -= Gravity * Time.deltaTime;
+        }
+        else
+        {
+            if (!_characterController.isGrounded)
+            {
+                _moveDir.y -= Gravity * Time.deltaTime;
+            }
+        }
         _characterController.Move(_moveDir * Time.deltaTime);
 
-        if (Input.GetKey("space"))
+    }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.tag == "ClimbArea")
         {
-            //transform.Translate(ClimbStair.transform.position);
-            transform.position = Vector3.MoveTowards(transform.position, ClimbStair.transform.position, 3);
+            climbArea = true;
         }
+    }
+
+    void OnTriggerExit(Collider col)
+    {
+        if (col.tag == "ClimbArea")
+        {
+            _animator.ResetTrigger("Hang");
+            climbArea = false;
+        }
+
 
     }
 }
