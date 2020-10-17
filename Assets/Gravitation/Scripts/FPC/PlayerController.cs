@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     public float Speed = 5.0f, jumpspeed = 5.0f;
 
-    public GameObject ClimbStair;
+    public GameObject ClimbStair, Climbreference;
 
     public float RotationSpeed = 240.0f;
 
@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
 
         transform.Rotate(0, turnAmount * RotationSpeed * Time.deltaTime, 0);
 
-        if (_characterController.isGrounded)
+        if (_characterController.isGrounded || climbArea)
         {
             _animator.SetFloat("Velocity", move.magnitude);
             //Debug.Log(_animator.GetFloat("Velocity"));
@@ -66,11 +66,11 @@ public class PlayerController : MonoBehaviour
             _moveDir *= Speed;
 
         }
-        if (Input.GetKey("space") && _characterController.isGrounded)
+        if (Input.GetKey("space"))// && _characterController.isGrounded)
         {
             if (climbArea)
             {
-                this.transform.LookAt(ClimbStair.transform);
+                transform.position = Climbreference.transform.position;
                 transform.rotation = Quaternion.Euler(0, 150, 0);
                 _animator.SetTrigger("Hang");
             }
@@ -83,14 +83,7 @@ public class PlayerController : MonoBehaviour
         if (!climbArea)
         {
             _moveDir.y -= Gravity * Time.deltaTime;
-        }
-        else
-        {
-            if (!_characterController.isGrounded)
-            {
-                _moveDir.y -= Gravity * Time.deltaTime;
-            }
-        }
+        }        
         _characterController.Move(_moveDir * Time.deltaTime);
 
     }
