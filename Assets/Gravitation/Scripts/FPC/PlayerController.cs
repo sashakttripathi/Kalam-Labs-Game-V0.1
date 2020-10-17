@@ -34,9 +34,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Get Input for axis
-/*        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-*/
+        /*        float h = Input.GetAxis("Horizontal");
+                float v = Input.GetAxis("Vertical");
+        */
 
         float h = Controller.Horizontal;
         float v = Controller.Vertical;
@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
         // Get Euler angles
         float turnAmount = Mathf.Atan2(move.x, move.z);
 
-        transform.Rotate(0, turnAmount *  RotationSpeed * Time.deltaTime, 0);
+        transform.Rotate(0, turnAmount * RotationSpeed * Time.deltaTime, 0);
 
         if (_characterController.isGrounded)
         {
@@ -66,13 +66,13 @@ public class PlayerController : MonoBehaviour
             _moveDir *= Speed;
 
         }
-        if(Input.GetKey("space") && _characterController.isGrounded)
+        if (Input.GetKey("space") && _characterController.isGrounded)
         {
             if (climbArea)
             {
                 this.transform.LookAt(ClimbStair.transform);
-                transform.rotation = Quaternion.Euler (0, transform.rotation.y, 0);
-                _animator.SetTrigger("Hang");                
+                transform.rotation = Quaternion.Euler(0, 150, 0);
+                _animator.SetTrigger("Hang");
             }
             else
             {
