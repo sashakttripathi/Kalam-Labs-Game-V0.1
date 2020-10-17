@@ -61,6 +61,7 @@ public class PlayerController : MonoBehaviour
             _animator.SetFloat("Velocity", move.magnitude);
             //Debug.Log(_animator.GetFloat("Velocity"));
             _moveDir = transform.forward * move.magnitude;
+            _animator.ResetTrigger("jump");
 
             _moveDir *= Speed;
 
@@ -70,7 +71,6 @@ public class PlayerController : MonoBehaviour
             //this.transform.LookAt(ClimbWall.transform);
             //transform.rotation = Quaternion.Euler (0, transform.rotation.y, 0);
             _animator.SetTrigger("jump");
-            _animator.ResetTrigger("jump");
             _moveDir.y = jumpspeed;
         }
         
