@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
             _moveDir *= Speed;
 
         }
-        if (Input.GetKey("space") || jump)// && _characterController.isGrounded)
+        if ((Input.GetKey("space") || jump) && _characterController.isGrounded)
         {
             if (climbArea)
             {
