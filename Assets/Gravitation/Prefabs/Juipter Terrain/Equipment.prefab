@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 5644724828867519688}
   - component: {fileID: 5644724828867519695}
   m_Layer: 8
-  m_Name: Equipment (2)
+  m_Name: Equipment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 65
   m_IsActive: 1
 --- !u!4 &5644724828867519694
 Transform:
@@ -25,9 +25,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5644724828867519693}
-  m_LocalRotation: {x: -0.7071067, y: 0.00070499635, z: 0.00069139746, w: 0.70710623}
+  m_LocalRotation: {x: -0.7071065, y: 0.00069110456, z: 0.00069110456, w: 0.7071065}
   m_LocalPosition: {x: 15.265, y: 6.494, z: -17.342}
-  m_LocalScale: {x: 0.21387495, y: 0.21387495, z: 0.21387495}
+  m_LocalScale: {x: 0.31684858, y: 0.3168486, z: 0.31684858}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1167716875115762238, guid: 6915e7ce51b992b4e85e0271535696ab, type: 3}
+  - {fileID: 2100000, guid: 2fd98f8dd9bf9a948ad6f1bfa30f613f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
