@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     public float Speed = 5.0f, jumpspeed = 5.0f;
 
-    public GameObject ClimbStair, Climbreference;
+    public GameObject ClimbFinalPos;
 
     public float RotationSpeed = 240.0f;
 
@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
 
         float h = Controller.Horizontal;
         float v = Controller.Vertical;
+
 
         // Calculate the forward vector
         Vector3 camForward_Dir = Vector3.Scale(Camera.main.transform.forward, new Vector3(1, 0, 1)).normalized;
@@ -70,9 +71,10 @@ public class PlayerController : MonoBehaviour
         {
             if (climbArea)
             {
-                transform.position = Climbreference.transform.position;
                 transform.rotation = Quaternion.Euler(0, 150, 0);
                 _animator.SetTrigger("Hang");
+                Invoke("moveUp", 1.4f);
+                Invoke("moveForward", 5.5f);
             }
             else
             {
@@ -83,7 +85,7 @@ public class PlayerController : MonoBehaviour
         if (!climbArea)
         {
             _moveDir.y -= Gravity * Time.deltaTime;
-        }        
+        }    
         _characterController.Move(_moveDir * Time.deltaTime);
 
     }
@@ -103,7 +105,17 @@ public class PlayerController : MonoBehaviour
             _animator.ResetTrigger("Hang");
             climbArea = false;
         }
+    }
 
+    public void moveUp()
+    {
+        _characterController.Move(new Vector3(0, 0.2f, 0));
+        _animator.ResetTrigger("Hang");
+    }
 
+    public void moveForward()
+    {
+        _animator.SetTrigger("Idle");
+        transform.position = Vector3.MoveTowards(transform.position, ClimbFinalPos.transform.position, 0.8f);
     }
 }
