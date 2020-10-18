@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 5374090130992948623}
   - component: {fileID: 5374090130992948620}
   m_Layer: 8
-  m_Name: Cylinder (1)
+  m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 65
   m_IsActive: 1
 --- !u!4 &5374090130992948621
 Transform:
@@ -25,9 +25,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5374090130992948626}
-  m_LocalRotation: {x: -0.68032056, y: 0.054730486, z: -0.015284593, w: 0.7307085}
+  m_LocalRotation: {x: -0.68032044, y: 0.05473295, z: -0.015282333, w: 0.7307085}
   m_LocalPosition: {x: 4.404, y: 6.722, z: -15.075}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.4}
+  m_LocalScale: {x: 0.31889006, y: 0.31889006, z: 0.4251866}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 78ea0d2ed00d2c84baf8102a509f72c4, type: 2}
+  - {fileID: 2100000, guid: 2fd98f8dd9bf9a948ad6f1bfa30f613f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

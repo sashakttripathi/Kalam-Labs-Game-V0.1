@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Baricade
+    second: {fileID: 2100000, guid: 2fd98f8dd9bf9a948ad6f1bfa30f613f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Black
     second: {fileID: 2100000, guid: ce976db2d4e85e848bd954853be2de96, type: 2}
   - first:
@@ -34,6 +39,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Glass Jupiter
     second: {fileID: 2100000, guid: ee337c6795d08fa44950085537ed9d5c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Jupiter
+    second: {fileID: 2100000, guid: 39229276016997c4183a3d8a5157c74e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -74,6 +84,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Table
     second: {fileID: 2100000, guid: 604f05a6cf5699945b354a22e8f31814, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tunnel
+    second: {fileID: 2100000, guid: d68c82d86cb73984bb511a1d3e910b57, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
