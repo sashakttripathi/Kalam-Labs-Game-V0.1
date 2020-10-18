@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     private float Gravity = 20.0f;
 
-    public bool climbArea = false;
+    public bool climbArea = false, jump = false;
 
     private Vector3 _moveDir = Vector3.zero;
 
@@ -67,20 +68,23 @@ public class PlayerController : MonoBehaviour
             _moveDir *= Speed;
 
         }
-        if (Input.GetKey("space"))// && _characterController.isGrounded)
+        if (Input.GetKey("space") || jump)// && _characterController.isGrounded)
         {
             if (climbArea)
             {
+                //transform.position = Vector3.MoveTowards();
                 transform.rotation = Quaternion.Euler(0, 150, 0);
                 _animator.SetTrigger("Hang");
-                Invoke("moveUp", 1.4f);
-                Invoke("moveForward", 5.5f);
+                Invoke("moveUp", 2.4f);
+                Invoke("moveForward", 5f);
+                //Invoke("moveForward", 7f);
             }
             else
             {
                 _animator.SetTrigger("jump");
+                _moveDir.y = jumpspeed;
             }
-            //_moveDir.y = jumpspeed;
+            jump = false;
         }
         if (!climbArea)
         {
@@ -109,13 +113,19 @@ public class PlayerController : MonoBehaviour
 
     public void moveUp()
     {
-        _characterController.Move(new Vector3(0, 0.2f, 0));
+        //_characterController.Move(new Vector3(0, 0.3f, 0));
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, 35, transform.position.z), 1f);
         _animator.ResetTrigger("Hang");
+        _animator.ResetTrigger("Idle");
     }
 
     public void moveForward()
     {
         _animator.SetTrigger("Idle");
-        transform.position = Vector3.MoveTowards(transform.position, ClimbFinalPos.transform.position, 0.8f);
+        transform.position = Vector3.MoveTowards(transform.position, ClimbFinalPos.transform.position, 1f);
+    }
+    public void Jump()
+    {
+        jump = true;
     }
 }
