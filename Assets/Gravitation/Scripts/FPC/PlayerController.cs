@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
 
     public float Speed = 5.0f, jumpspeed = 5.0f;
 
-    public GameObject ClimbFinalPos;
+    //public GameObject ClimbFinalPos;
 
     public float RotationSpeed = 240.0f;
 
@@ -57,75 +57,48 @@ public class PlayerController : MonoBehaviour
 
         transform.Rotate(0, turnAmount * RotationSpeed * Time.deltaTime, 0);
 
-        if (_characterController.isGrounded || climbArea)
+        if (_characterController.isGrounded)
         {
+            //Debug.Log("character controller grounded");
             _animator.SetFloat("Velocity", move.magnitude);
-            //Debug.Log(_animator.GetFloat("Velocity"));
             _moveDir = transform.forward * move.magnitude;
-            _animator.ResetTrigger("jump");
+            //_animator.ResetTrigger("jump");
             _animator.ResetTrigger("Hang");
-
+            _animator.ResetTrigger("Idle");
             _moveDir *= Speed;
-
         }
         if ((Input.GetKey("space") || jump) && _characterController.isGrounded)
         {
             if (climbArea)
             {
-                //transform.position = Vector3.MoveTowards();
                 transform.rotation = Quaternion.Euler(0, 150, 0);
                 _animator.SetTrigger("Hang");
-                Invoke("moveUp", 2.4f);
-                Invoke("moveForward", 5f);
-                //Invoke("moveForward", 7f);
             }
             else
             {
-                _animator.SetTrigger("jump");
-                _moveDir.y = jumpspeed;
+                //_animator.SetTrigger("jump");
+                transform.rotation = Quaternion.Euler(0, 150, 0);
+                _animator.SetTrigger("Hang");
+                //_moveDir.y = jumpspeed;
             }
             jump = false;
         }
         if (!climbArea)
         {
+            //Debug.Log("gravity applied");
             _moveDir.y -= Gravity * Time.deltaTime;
-        }    
+        }
+        if (Input.GetKey("q"))
+        {
+            _animator.SetTrigger("Idle");
+        }
         _characterController.Move(_moveDir * Time.deltaTime);
 
     }
 
-    void OnTriggerEnter(Collider col)
-    {
-        if (col.tag == "ClimbArea")
-        {
-            climbArea = true;
-        }
-    }
-
-    void OnTriggerExit(Collider col)
-    {
-        if (col.tag == "ClimbArea")
-        {
-            _animator.ResetTrigger("Hang");
-            climbArea = false;
-        }
-    }
-
-    public void moveUp()
-    {
-        //_characterController.Move(new Vector3(0, 0.3f, 0));
-        transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, 35, transform.position.z), 1f);
-        _animator.ResetTrigger("Hang");
-        _animator.ResetTrigger("Idle");
-    }
-
-    public void moveForward()
-    {
-        _animator.SetTrigger("Idle");
-        transform.position = Vector3.MoveTowards(transform.position, ClimbFinalPos.transform.position, 1f);
-    }
     public void Jump()
     {
         jump = true;
     }
+
 }
