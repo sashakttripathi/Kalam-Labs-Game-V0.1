@@ -5,7 +5,7 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject GripMeter;
+    private GameObject GripMeter, JoyStick, MassMeter, JumpButton;
     // Start is called before the first frame update
     public bool ActivityStarted;
 
@@ -18,13 +18,21 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(ActivityStarted)
+        if(ActivityStarted)// here activity started = activity 1 started
         {
             GripMeter.SetActive(true);
+            JoyStick.SetActive(false);
+            MassMeter.SetActive(false);
+            JumpButton.SetActive(false);
         }
         else
         {
             GripMeter.SetActive(false);
+            JoyStick.SetActive(true);
+            MassMeter.SetActive(false);
+            JumpButton.SetActive(false);
         }
+
+        
     }
 }

@@ -538,6 +538,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2534964839176971238, guid: 2a1b6cf9fe3a52e488a9c115163ef22e, type: 3}
+--- !u!114 &1492905141 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 525835356066787349, guid: e9445c06950a0b046999acceb7541541, type: 3}
+  m_PrefabInstance: {fileID: 1802097677}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0825580d2a062d4190132c6c1fe453c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1567834447 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3143606747533678632, guid: 18ec0e0c6a755ce41ba7b04e948b450f, type: 3}
@@ -782,17 +793,21 @@ PrefabInstance:
       propertyPath: m_ChildCameras.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 525835354589700858, guid: e9445c06950a0b046999acceb7541541, type: 3}
+      propertyPath: gripMeter
+      value: 
+      objectReference: {fileID: 1492905141}
     - target: {fileID: 525835354696689558, guid: e9445c06950a0b046999acceb7541541, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.2096298
-      objectReference: {fileID: 0}
-    - target: {fileID: 525835354696689558, guid: e9445c06950a0b046999acceb7541541, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.47489974
+      value: 0.20962982
       objectReference: {fileID: 0}
     - target: {fileID: 525835354696689558, guid: e9445c06950a0b046999acceb7541541, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.11759453
+      value: 0.117594555
+      objectReference: {fileID: 0}
+    - target: {fileID: 525835354696689558, guid: e9445c06950a0b046999acceb7541541, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.47489977
       objectReference: {fileID: 0}
     - target: {fileID: 525835355789116778, guid: e9445c06950a0b046999acceb7541541, type: 3}
       propertyPath: m_LocalPosition.x
@@ -842,9 +857,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: FPC
       objectReference: {fileID: 0}
+    - target: {fileID: 525835356066787349, guid: e9445c06950a0b046999acceb7541541, type: 3}
+      propertyPath: currentReading
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 525835356432246988, guid: e9445c06950a0b046999acceb7541541, type: 3}
       propertyPath: near clip plane
       value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 525835356432246995, guid: e9445c06950a0b046999acceb7541541, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.067538895
+      objectReference: {fileID: 0}
+    - target: {fileID: 525835356432246995, guid: e9445c06950a0b046999acceb7541541, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.93060356
+      objectReference: {fileID: 0}
+    - target: {fileID: 525835356432246995, guid: e9445c06950a0b046999acceb7541541, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.22208503
+      objectReference: {fileID: 0}
+    - target: {fileID: 525835356432246995, guid: e9445c06950a0b046999acceb7541541, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.28300846
+      objectReference: {fileID: 0}
+    - target: {fileID: 525835356432246995, guid: e9445c06950a0b046999acceb7541541, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.116375
+      objectReference: {fileID: 0}
+    - target: {fileID: 525835356432246995, guid: e9445c06950a0b046999acceb7541541, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 38.25026
+      objectReference: {fileID: 0}
+    - target: {fileID: 525835356432246995, guid: e9445c06950a0b046999acceb7541541, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.05904007
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9445c06950a0b046999acceb7541541, type: 3}

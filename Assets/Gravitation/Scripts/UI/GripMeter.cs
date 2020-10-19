@@ -7,7 +7,7 @@ public class GripMeter : MonoBehaviour
 {
 
     [SerializeField]
-    private GameObject[] GripMeterScale;
+    private GameObject[] GripMeterScale, GripMeterIndicator;
 
     [SerializeField]
     private Sprite[] GripMeterReading;
@@ -15,34 +15,42 @@ public class GripMeter : MonoBehaviour
     [SerializeField]
     private Sprite ThresholdSprite, InactiveStateSprite;
     // Start is called before the first frame update
-    public int Threshold;
+    [Range(1, 20)]
+    public int LowerThreshold, UpperThreshold, GripLooseThreshold;
     public float rateIncrease, rateDecrease;
-
-    float currentReading = 10, lastreading = 0;
+    
+    [Range(1, 20)][Tooltip("Don't Change lastReading Value")]
+    public float currentReading, lastreading = 0;
     void Start()
     {
-        GripMeterScale[Threshold - 1].GetComponent<Image>().sprite = ThresholdSprite;
+        for (int i = 0; i < GripMeterIndicator.Length; i++)
+        {
+            if (i == UpperThreshold - 1 || i == LowerThreshold - 1)
+            {
+                GripMeterIndicator[i].GetComponent<Image>().sprite = ThresholdSprite;
+                GripMeterIndicator[i].GetComponent<Image>().color = Color.white;
+            }
+            else
+            {
+                GripMeterIndicator[i].GetComponent<Image>().color = Color.clear;
+            }   
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         int i;
-        for ( i = 0; i < currentReading; i++)
+        for (i = 0; i < currentReading; i++)
         {
-            if (i != Threshold - 1)
-            {
-                GripMeterScale[i].GetComponent<Image>().sprite = GripMeterReading[i];
-            }    
+            GripMeterScale[i].GetComponent<Image>().sprite = GripMeterReading[i];    
         }
 
         for (int j = i; j < lastreading; j ++)
         {
-            if (j != Threshold - 1)
-            {
-                GripMeterScale[j].GetComponent<Image>().sprite = InactiveStateSprite;
-            }
+            GripMeterScale[j].GetComponent<Image>().sprite = InactiveStateSprite;
         }
+        
         lastreading = currentReading;
         if (currentReading >= rateDecrease)
         {
@@ -52,6 +60,11 @@ public class GripMeter : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && currentReading < 20 - rateIncrease)
         {
             currentReading += rateIncrease;
+        }
+
+        if (currentReading > UpperThreshold)
+        {
+            rateDecrease = 0;
         }
         //Debug.Log(currentReading);
     }

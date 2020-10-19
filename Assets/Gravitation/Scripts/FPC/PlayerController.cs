@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public FixedJoystick Controller;
 
+    public GripMeter gripMeter;
+
     public float Speed = 5.0f, jumpspeed = 5.0f;
 
     //public GameObject ClimbFinalPos;
@@ -21,6 +23,7 @@ public class PlayerController : MonoBehaviour
     private float Gravity = 20.0f;
 
     public bool climbArea = false, jump = false;
+    private bool fall = false, griploose = false, hang = false, tryclimb = false, climb = false, climbfail = false;
 
     private Vector3 _moveDir = Vector3.zero;
 
@@ -39,7 +42,7 @@ public class PlayerController : MonoBehaviour
                 float v = Input.GetAxis("Vertical");
         */
 
-        float h = Controller.Horizontal;
+        /*float h = Controller.Horizontal;
         float v = Controller.Vertical;
 
 
@@ -93,12 +96,64 @@ public class PlayerController : MonoBehaviour
             _animator.SetTrigger("Idle");
         }
         _characterController.Move(_moveDir * Time.deltaTime);
+        */
+        _animator.ResetTrigger("Idle");
+        _animator.ResetTrigger("Hang");
+        if (gripMeter.currentReading < gripMeter.rateDecrease && !fall)
+        {
+            Debug.Log("fall");
+            _animator.SetTrigger("Idle");
+            fall = true; griploose = false; hang = false; tryclimb = false; climb = false; climbfail = false;
+        }
 
+        if (gripMeter.currentReading < gripMeter.LowerThreshold && !griploose && !fall)
+        {
+            Debug.Log("gripLoose");
+            _animator.SetTrigger("Idle");
+            fall = false; griploose = true; hang = false; tryclimb = false; climb = false; climbfail = false;
+        }
+        
+        if (griploose)
+        {
+            if (gripMeter.currentReading > gripMeter.LowerThreshold)
+            {
+                Debug.Log("2nd GripLoose");
+                _animator.SetTrigger("Hang");
+                Invoke("callHang", 1f);
+                griploose = false;
+            }
+        }
+        
+        if (gripMeter.currentReading > gripMeter.LowerThreshold /*&& gripMeter.currentReading < gripMeter.UpperThreshold && gripMeter.currentReading > gripMeter.lastreading*/ && !tryclimb && !griploose)
+        {
+            Debug.Log("tryClimb");
+            _animator.SetTrigger("Hang");
+            fall = false; griploose = false; hang = false; tryclimb = true; climb = false; climbfail = false;
+        }
+
+        /*if (gripMeter.currentReading > gripMeter.LowerThreshold && gripMeter.currentReading < gripMeter.UpperThreshold && gripMeter.currentReading < gripMeter.lastreading && !climbfail && !fall)
+        {
+            Debug.Log("climbfail");
+            _animator.SetTrigger("Idle");
+            fall = false; griploose = false; hang = false; tryclimb = false; climb = false; climbfail = true;
+        }*/
+
+        if (gripMeter.currentReading > gripMeter.UpperThreshold && !climb)
+        {
+            Debug.Log("climb");
+            _animator.SetTrigger("Hang");
+            fall = false; griploose = false; hang = false; tryclimb = false; climb = true; climbfail = false;
+        }
     }
 
     public void Jump()
     {
         jump = true;
+    }
+
+    public void callHang()
+    {
+        _animator.SetTrigger("Hang");
     }
 
 }
