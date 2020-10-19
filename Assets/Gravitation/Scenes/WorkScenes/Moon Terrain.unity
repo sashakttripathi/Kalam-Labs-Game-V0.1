@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 0bc7c269eedaaf94e962974ea18b2e64, type: 2}
+  m_LightingDataAsset: {fileID: 0}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 1669496f6fdf21347abd461c607c58a7, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -284,6 +284,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 525835354696689558, guid: e9445c06950a0b046999acceb7541541, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.324331
+      objectReference: {fileID: 0}
+    - target: {fileID: 525835354696689558, guid: e9445c06950a0b046999acceb7541541, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.31771806
+      objectReference: {fileID: 0}
+    - target: {fileID: 525835355530922363, guid: e9445c06950a0b046999acceb7541541, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.08566024
+      objectReference: {fileID: 0}
+    - target: {fileID: 525835355530922363, guid: e9445c06950a0b046999acceb7541541, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.1621941
+      objectReference: {fileID: 0}
+    - target: {fileID: 525835355914289648, guid: e9445c06950a0b046999acceb7541541, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.07155341
+      objectReference: {fileID: 0}
+    - target: {fileID: 525835355914289648, guid: e9445c06950a0b046999acceb7541541, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.92833996
+      objectReference: {fileID: 0}
+    - target: {fileID: 525835355914289648, guid: e9445c06950a0b046999acceb7541541, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.26513928
+      objectReference: {fileID: 0}
+    - target: {fileID: 525835355959880937, guid: e9445c06950a0b046999acceb7541541, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.0636969
+      objectReference: {fileID: 0}
+    - target: {fileID: 525835355959880937, guid: e9445c06950a0b046999acceb7541541, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.18909267
+      objectReference: {fileID: 0}
+    - target: {fileID: 525835356432246988, guid: e9445c06950a0b046999acceb7541541, type: 3}
+      propertyPath: near clip plane
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 525835356432246995, guid: e9445c06950a0b046999acceb7541541, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.07155341
+      objectReference: {fileID: 0}
+    - target: {fileID: 525835356432246995, guid: e9445c06950a0b046999acceb7541541, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.92833996
+      objectReference: {fileID: 0}
+    - target: {fileID: 525835356432246995, guid: e9445c06950a0b046999acceb7541541, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.26513928
+      objectReference: {fileID: 0}
     - target: {fileID: 5143087257537320171, guid: e9445c06950a0b046999acceb7541541, type: 3}
       propertyPath: near clip plane
       value: 0.001
