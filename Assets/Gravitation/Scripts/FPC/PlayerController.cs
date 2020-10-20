@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     private float Gravity = 20.0f;
 
     public bool climbArea = false, jump = false;
-    private bool fall = false, griploose = false, hang = false, tryclimb = false, climb = false, climbfail = false;
+    private bool fall = false, griploose = false, hang = true, tryclimb = false, climb = false;
 
     private Vector3 _moveDir = Vector3.zero;
 
@@ -99,51 +99,68 @@ public class PlayerController : MonoBehaviour
         */
         _animator.ResetTrigger("Idle");
         _animator.ResetTrigger("Hang");
-        if (gripMeter.currentReading < gripMeter.rateDecrease && !fall)
+        float CR = gripMeter.currentReading;
+        float LT = gripMeter.LowerThreshold;
+        float UT = gripMeter.UpperThreshold;
+        float RoD = gripMeter.rateDecrease;
+        while (true)
         {
-            Debug.Log("fall");
-            _animator.SetTrigger("Idle");
-            fall = true; griploose = false; hang = false; tryclimb = false; climb = false; climbfail = false;
-        }
-
-        if (gripMeter.currentReading < gripMeter.LowerThreshold && !griploose && !fall)
-        {
-            Debug.Log("gripLoose");
-            _animator.SetTrigger("Idle");
-            fall = false; griploose = true; hang = false; tryclimb = false; climb = false; climbfail = false;
-        }
-        
-        if (griploose)
-        {
-            if (gripMeter.currentReading > gripMeter.LowerThreshold)
+            if (hang)
             {
-                Debug.Log("2nd GripLoose");
-                _animator.SetTrigger("Hang");
-                Invoke("callHang", 1f);
-                griploose = false;
+                if (CR > LT)
+                {
+                    Debug.Log("H to TC");
+                    _animator.SetTrigger("Hang");
+                    hang = false; tryclimb = true;
+                }
+                else if (CR < LT)
+                {
+                    Debug.Log("H to GL");
+                    _animator.SetTrigger("Idle");
+                    hang = false; griploose = true;
+                }
+                break;
+            }
+
+            if (griploose)
+            {
+                if (CR > LT)
+                {
+                    Debug.Log("GL to H");
+                    _animator.SetTrigger("Hang");
+                    griploose = false; hang = true;
+                }
+                else if (CR < RoD)
+                {
+                    Debug.Log("GL to Fall");
+                    _animator.SetTrigger("Idle");
+                    griploose = false; fall = true;
+                }
+                break;
+            }
+
+            if (tryclimb)
+            {
+                if (CR < LT)
+                {
+                    Debug.Log("TC to H");
+                    _animator.SetTrigger("Idle");
+                    tryclimb = false; hang = true;
+                }
+                else if (CR > UT)
+                {
+                    Debug.Log("TC to C");
+                    _animator.SetTrigger("Hang");
+                    tryclimb = false; climb = true;
+                }
+                break;
+            }
+            else
+            {
+                break;
             }
         }
-        
-        if (gripMeter.currentReading > gripMeter.LowerThreshold /*&& gripMeter.currentReading < gripMeter.UpperThreshold && gripMeter.currentReading > gripMeter.lastreading*/ && !tryclimb && !griploose)
-        {
-            Debug.Log("tryClimb");
-            _animator.SetTrigger("Hang");
-            fall = false; griploose = false; hang = false; tryclimb = true; climb = false; climbfail = false;
-        }
-
-        /*if (gripMeter.currentReading > gripMeter.LowerThreshold && gripMeter.currentReading < gripMeter.UpperThreshold && gripMeter.currentReading < gripMeter.lastreading && !climbfail && !fall)
-        {
-            Debug.Log("climbfail");
-            _animator.SetTrigger("Idle");
-            fall = false; griploose = false; hang = false; tryclimb = false; climb = false; climbfail = true;
-        }*/
-
-        if (gripMeter.currentReading > gripMeter.UpperThreshold && !climb)
-        {
-            Debug.Log("climb");
-            _animator.SetTrigger("Hang");
-            fall = false; griploose = false; hang = false; tryclimb = false; climb = true; climbfail = false;
-        }
+                
     }
 
     public void Jump()
