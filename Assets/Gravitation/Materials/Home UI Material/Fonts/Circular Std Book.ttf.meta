@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 53e120600364fb34ea6ce8324516744c
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Circular Std Book
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0068afe7c7664cf43ad304afe86111b1, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
