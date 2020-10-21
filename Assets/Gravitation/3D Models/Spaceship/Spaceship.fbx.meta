@@ -1,0 +1,255 @@
+fileFormatVersion: 2
+guid: ca3a3a03cf13d5c4eaf3223389dc7382
+ModelImporter:
+  serializedVersion: 20101
+  internalIDToNameTable:
+  - first:
+      74: 885944232402757753
+    second: Armature|Action
+  - first:
+      74: 807397085664902537
+    second: Armature|Back LegsAction
+  - first:
+      74: -1559071518392153964
+    second: Armature|Cube.001Action
+  - first:
+      74: 5922712533297259479
+    second: Armature|Cube.001Action.001
+  - first:
+      74: 9218157010744241517
+    second: Armature|Landing
+  - first:
+      74: 692606545667804944
+    second: Armature|Take Off
+  - first:
+      74: -2553343404695681839
+    second: Back Legs|Action
+  - first:
+      74: -3965567518470197544
+    second: Back Legs|Back LegsAction
+  - first:
+      74: -6912310231812348088
+    second: Back Legs|Cube.001Action
+  - first:
+      74: -2093983152159279430
+    second: Back Legs|Cube.001Action.001
+  - first:
+      74: 1112133853026938163
+    second: Chair|Action
+  - first:
+      74: 6969694343387716817
+    second: Chair|Back LegsAction
+  - first:
+      74: -5068627060104939080
+    second: Chair|Cube.001Action
+  - first:
+      74: 2563567154459422046
+    second: Chair|Cube.001Action.001
+  - first:
+      74: -5313687988712005934
+    second: Chair.001|Action
+  - first:
+      74: -4540525630576292766
+    second: Chair.001|Back LegsAction
+  - first:
+      74: -1133614377351898829
+    second: Chair.001|Cube.001Action
+  - first:
+      74: 5073911327866622900
+    second: Chair.001|Cube.001Action.001
+  - first:
+      74: 7190651497361647703
+    second: Armature|Cube.001Action.002
+  - first:
+      74: 4828028426687900610
+    second: Armature|Cube.002Action
+  - first:
+      74: 1251688168678572987
+    second: Back Legs|Cube.001Action.002
+  - first:
+      74: 7962496962517542503
+    second: Back Legs|Cube.002Action
+  - first:
+      74: 3734409788054959031
+    second: Chair|Cube.001Action.002
+  - first:
+      74: 1723320078918626815
+    second: Chair|Cube.002Action
+  - first:
+      74: -4269004180925607964
+    second: Chair.001|Cube.001Action.002
+  - first:
+      74: 6103384909372374772
+    second: Chair.001|Cube.002Action
+  - first:
+      74: 6278029279821259226
+    second: Cube.001|Action
+  - first:
+      74: -7236898247618838578
+    second: Cube.001|Back LegsAction
+  - first:
+      74: -8515560403302317629
+    second: Cube.001|Cube.001Action
+  - first:
+      74: -4064532029014869935
+    second: Cube.001|Cube.001Action.001
+  - first:
+      74: 228470328875462131
+    second: Cube.001|Cube.001Action.002
+  - first:
+      74: 8888790717876117480
+    second: Cube.001|Cube.002Action
+  - first:
+      74: 2279829093579850648
+    second: Cube.002|Action
+  - first:
+      74: 4588745026072678976
+    second: Cube.002|Back LegsAction
+  - first:
+      74: 978295544477664516
+    second: Cube.002|Cube.001Action
+  - first:
+      74: 5438752550503332007
+    second: Cube.002|Cube.001Action.001
+  - first:
+      74: -7955520868732675273
+    second: Cube.002|Cube.001Action.002
+  - first:
+      74: 6712369695479197947
+    second: Cube.002|Cube.002Action
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: a28d905bc80d6da499aac4696287c1ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Inside
+    second: {fileID: 2100000, guid: da8abd82157d96048899ff8751cdeb7a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Legs Space
+    second: {fileID: 2100000, guid: 51f4d17366262024c896dd71c943b3bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Main Thrusters
+    second: {fileID: 2100000, guid: e89f9949e2cbbc04282b3711e8cb21b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: cdb08a84cf4df184c94df9691b64b4f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: c3f028e0e1f116c46938058719323bb8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Outside
+    second: {fileID: 2100000, guid: 05fb64720f4b6a24f9304836f5054dfd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Thrusters
+    second: {fileID: 2100000, guid: fb66640159f68624fbd438a33d6480f8, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

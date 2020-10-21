@@ -2,7 +2,10 @@ fileFormatVersion: 2
 guid: 2d22502601286e6409130ccd30978e3d
 ModelImporter:
   serializedVersion: 20101
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -623603649343465320
+    second: Scene
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -48,7 +51,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
-    optimizeGameObjects: 0
+    optimizeGameObjects: 1
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -58,7 +61,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -86,8 +89,8 @@ ModelImporter:
     weldVertices: 1
     bakeAxisConversion: 0
     preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
+    skinWeightsMode: 1
+    maxBonesPerVertex: 8
     minBoneWeight: 0.001
     meshOptimizationFlags: -1
     indexFormat: 0
@@ -112,7 +115,152 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: Spaceship(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Empty
+      parentName: Spaceship(Clone)
+      position: {x: -1.0984752e-18, y: 1.2678659, z: 0.07476178}
+      rotation: {x: 0.000000015454313, y: -0.70710677, z: 0.000000015454312, w: 0.7071068}
+      scale: {x: 0.9163633, y: 0.9163633, z: 0.9163633}
+    - name: Cube
+      parentName: Spaceship(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: Spaceship(Clone)
+      position: {x: 0.21198286, y: 0.30463442, z: 0.000000005892779}
+      rotation: {x: -0.5, y: -0.49999997, z: 0.5, w: 0.50000006}
+      scale: {x: 1, y: 1, z: 0.33604145}
+    - name: Bone
+      parentName: Armature
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Legs_L
+      parentName: Bone
+      position: {x: -0.10357254, y: 0.45639908, z: -0.6464925}
+      rotation: {x: -0.70431477, y: 0.062775284, z: 0.06277532, w: 0.70431477}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Legs
+      parentName: Legs_L
+      position: {x: -0.25232482, y: -0.5720496, z: 0.40889633}
+      rotation: {x: 0.06277528, y: 0.7043147, z: -0.06277527, w: 0.70431477}
+      scale: {x: 2.9758234, y: 1, z: 1.0000001}
+    - name: Legs_L_end
+      parentName: Legs_L
+      position: {x: -0, y: 0.3360415, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Stairs_L
+      parentName: Bone
+      position: {x: 0.4356206, y: -0.91116524, z: -1.1832421}
+      rotation: {x: -0.6931184, y: 0.1399549, z: 0.13995486, w: 0.6931178}
+      scale: {x: 0.9999999, y: 0.99999994, z: 1}
+    - name: Stairs
+      parentName: Stairs_L
+      position: {x: 1.4102821, y: -0.2546322, z: 1.5419885}
+      rotation: {x: 0.5959672, y: -0.38055646, z: -0.5959671, w: -0.3805565}
+      scale: {x: 2.9758234, y: 0.99999994, z: 1}
+    - name: Stairs_L_end
+      parentName: Stairs_L
+      position: {x: -0, y: 0.33604148, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Doors_L
+      parentName: Bone
+      position: {x: 1.4076751, y: -1.0103514, z: -0.47828054}
+      rotation: {x: -0.6832687, y: 0.18205476, z: 0.18205473, w: 0.6832686}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Doors
+      parentName: Doors_L
+      position: {x: -1.731459, y: 0.3739849, z: 1.6173605}
+      rotation: {x: 0.16424893, y: 0.68776613, z: -0.16424891, w: 0.6877662}
+      scale: {x: 2.9758234, y: 1, z: 1}
+    - name: Doors_L_end
+      parentName: Doors_L
+      position: {x: -0, y: 0.33604154, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Legs_R.001
+      parentName: Bone
+      position: {x: -0.06637794, y: 0.21630454, z: 0.67717}
+      rotation: {x: -0.083899885, y: 0.7021118, z: 0.7021116, w: 0.08390004}
+      scale: {x: 1, y: 0.9999998, z: 1}
+    - name: Stairs.001
+      parentName: Legs_R.001
+      position: {x: 0.3911088, y: -0.60196304, z: 0.4145188}
+      rotation: {x: 0.70211184, y: 0.083900295, z: -0.7021114, w: 0.08390034}
+      scale: {x: 2.9758234, y: 1.0000001, z: 1}
+    - name: Legs.001
+      parentName: Legs_R.001
+      position: {x: 0.34925458, y: -0.598845, z: -0.1619094}
+      rotation: {x: 0.70211184, y: 0.083900295, z: -0.7021114, w: 0.08390034}
+      scale: {x: 2.9758234, y: 1.0000001, z: 1}
+    - name: Legs_R.001_end
+      parentName: Legs_R.001
+      position: {x: -0, y: 0.3360414, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Stairs_R.001
+      parentName: Bone
+      position: {x: 0.4410942, y: -0.8882513, z: 1.1935208}
+      rotation: {x: -0.6317882, y: -0.31755903, z: -0.3175591, w: 0.6317881}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Stairs_R.001_end
+      parentName: Stairs_R.001
+      position: {x: -0, y: 0.33604136, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Doors_R.001
+      parentName: Bone
+      position: {x: 1.4134892, y: -0.8851428, z: 0.43679503}
+      rotation: {x: 0.60310817, y: -0.60310805, z: -0.3691349, w: 0.36913502}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: Doors.001
+      parentName: Doors_R.001
+      position: {x: -1.5159665, y: 0.43095356, z: 1.7110918}
+      rotation: {x: 0.9717441, y: -0.00000021408184, z: 0.00000013247437, w: 0.2360368}
+      scale: {x: 2.9758236, y: 1, z: 1}
+    - name: Doors_R.001_end
+      parentName: Doors_R.001
+      position: {x: -0, y: 0.33604157, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Legs_L.001
+      parentName: Bone
+      position: {x: -0.116306335, y: 4.273438, z: 0.04781145}
+      rotation: {x: 0.07073867, y: 0.11633141, z: -0.5828988, w: 0.80105686}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Front Leg
+      parentName: Legs_L.001
+      position: {x: -0.25800055, y: -3.6372592, z: -0.10090815}
+      rotation: {x: -0.43241227, y: 0.44440532, z: -0.5606164, w: 0.54884684}
+      scale: {x: 2.9758232, y: 1, z: 0.9999999}
+    - name: Legs_L.001_end
+      parentName: Legs_L.001
+      position: {x: -0, y: 2.515519, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Legs_R.002
+      parentName: Bone
+      position: {x: -0.026807114, y: -4.2088823, z: -0.021488816}
+      rotation: {x: -0.13959694, y: -0.08582541, z: 0.8289535, w: -0.5347736}
+      scale: {x: 0.9999703, y: 1, z: 1}
+    - name: Back Legs
+      parentName: Legs_R.002
+      position: {x: 0.6136537, y: -4.8035383, z: 0.22332555}
+      rotation: {x: 0.5559149, y: 0.58816093, z: -0.4369812, w: -0.3925211}
+      scale: {x: 2.9758236, y: 1.0000029, z: 1.0000268}
+    - name: Legs_R.002_end
+      parentName: Legs_R.002
+      position: {x: -0, y: 3.189787, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -123,7 +271,7 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
