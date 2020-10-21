@@ -5,7 +5,7 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject GripMeter, JoyStick, MassMeter, JumpButton;
+    public GameObject GripMeter, JoyStick, MassMeter, JumpButton;
     // Start is called before the first frame update
     public bool ActivityStarted;
 

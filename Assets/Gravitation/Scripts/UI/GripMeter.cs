@@ -7,13 +7,13 @@ public class GripMeter : MonoBehaviour
 {
 
     [SerializeField]
-    private GameObject[] GripMeterScale, GripMeterIndicator;
+    public GameObject[] GripMeterScale, GripMeterIndicator;
 
     [SerializeField]
-    private Sprite[] GripMeterReading;
+    public Sprite[] GripMeterReading;
 
     [SerializeField]
-    private Sprite ThresholdSprite, InactiveStateSprite;
+    public Sprite ThresholdSprite, InactiveStateSprite;
     // Start is called before the first frame update
     [Range(1, 20)]
     public int LowerThreshold, UpperThreshold, GripLooseThreshold;

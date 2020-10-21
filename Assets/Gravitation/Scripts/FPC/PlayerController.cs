@@ -20,10 +20,10 @@ public class PlayerController : MonoBehaviour
 
     public float RotationSpeed = 240.0f;
 
-    private float Gravity = 20.0f;
+    //private float Gravity = 20.0f;
 
     public bool climbArea = false, jump = false;
-    private bool fall = false, griploose = false, hang = true, tryclimb = false, climb = false;
+    private bool griploose = false, hang = true, tryclimb = false;
 
     private Vector3 _moveDir = Vector3.zero;
 
@@ -97,70 +97,64 @@ public class PlayerController : MonoBehaviour
         }
         _characterController.Move(_moveDir * Time.deltaTime);
         */
-        _animator.ResetTrigger("Idle");
-        _animator.ResetTrigger("Hang");
+        _animator.ResetTrigger("H to TC");
+        _animator.ResetTrigger("H to GL");
+        _animator.ResetTrigger("GL to H");
+        _animator.ResetTrigger("GL to F");
+        _animator.ResetTrigger("TC to H");
+        _animator.ResetTrigger("TC to C");
         float CR = gripMeter.currentReading;
         float LT = gripMeter.LowerThreshold;
         float UT = gripMeter.UpperThreshold;
         float RoD = gripMeter.rateDecrease;
-        while (true)
+        
+        if (hang)
         {
-            if (hang)
+            if (CR > LT)
             {
-                if (CR > LT)
-                {
-                    Debug.Log("H to TC");
-                    _animator.SetTrigger("Hang");
-                    hang = false; tryclimb = true;
-                }
-                else if (CR < LT)
-                {
-                    Debug.Log("H to GL");
-                    _animator.SetTrigger("Idle");
-                    hang = false; griploose = true;
-                }
-                break;
+                Debug.Log("H to TC");
+                _animator.SetTrigger("H to TC");
+                hang = false; tryclimb = true;
             }
-
-            if (griploose)
+            else if (CR < LT)
             {
-                if (CR > LT)
-                {
-                    Debug.Log("GL to H");
-                    _animator.SetTrigger("Hang");
-                    griploose = false; hang = true;
-                }
-                else if (CR < RoD)
-                {
-                    Debug.Log("GL to Fall");
-                    _animator.SetTrigger("Idle");
-                    griploose = false; fall = true;
-                }
-                break;
-            }
-
-            if (tryclimb)
-            {
-                if (CR < LT)
-                {
-                    Debug.Log("TC to H");
-                    _animator.SetTrigger("Idle");
-                    tryclimb = false; hang = true;
-                }
-                else if (CR > UT)
-                {
-                    Debug.Log("TC to C");
-                    _animator.SetTrigger("Hang");
-                    tryclimb = false; climb = true;
-                }
-                break;
-            }
-            else
-            {
-                break;
+                Debug.Log("H to GL");
+                _animator.SetTrigger("H to GL");
+                hang = false; griploose = true;
             }
         }
-                
+
+        if (griploose)
+        {
+            if (CR > LT)
+            {
+                Debug.Log("GL to H");
+                _animator.SetTrigger("GL to H");
+                griploose = false; hang = true;
+            }
+            else if (CR < RoD)
+            {
+                Debug.Log("GL to Fall");
+                _animator.SetTrigger("GL to F");
+                griploose = false;
+            }
+        }
+
+        if (tryclimb)
+        {
+            if (CR < LT)
+            {
+                Debug.Log("TC to H");
+                _animator.SetTrigger("TC to H");
+                tryclimb = false; hang = true;
+            }
+            else if (CR > UT)
+            {
+                Debug.Log("TC to C");
+                _animator.SetTrigger("TC to C");
+                tryclimb = false;
+            }
+        }
     }
 
     public void Jump()
