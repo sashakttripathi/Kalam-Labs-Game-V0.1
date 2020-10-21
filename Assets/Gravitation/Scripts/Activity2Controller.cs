@@ -9,15 +9,15 @@ public class Activity2Controller : MonoBehaviour
     public GameObject[] KG;
 
     private Animator _animator;
-
     // TC = TryCatch, SPD/SPU = Stress Pull Down/Up, NPaS = Normal Pull to Sit
     bool Idle = true, TC = false, SPD = false, SPU = false;
-    int count = 0;
+    int count = 0;float initRoD;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        initRoD = gripMeter.rateDecrease;
         _animator = GetComponent<Animator>();
         for (int i = 0; i < KG.Length; i ++)
         {
@@ -79,5 +79,7 @@ public class Activity2Controller : MonoBehaviour
     public void IdleTrue()
     {
         Idle = true;
+        gripMeter.rateDecrease = initRoD;
+        gripMeter.currentReading = gripMeter.LowerThreshold - 1;
     }
 }
