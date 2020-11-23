@@ -43,7 +43,10 @@ public class Activity2Controller : MonoBehaviour
             _animator.SetTrigger("Idle to TC");
             Idle = false;TC = true;
             KG[count].SetActive(true);
-            count += 1;
+            if (count >= KG.Length - 1)
+            {
+                count += 1;
+            }
         }
 
         if ((TC || SPD) && (CR > LT))

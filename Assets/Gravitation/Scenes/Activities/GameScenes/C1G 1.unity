@@ -799,11 +799,11 @@ PrefabInstance:
       objectReference: {fileID: 1492905141}
     - target: {fileID: 525835354696689558, guid: e9445c06950a0b046999acceb7541541, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.2096298
+      value: 0.20962982
       objectReference: {fileID: 0}
     - target: {fileID: 525835354696689558, guid: e9445c06950a0b046999acceb7541541, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.11759455
+      value: 0.117594555
       objectReference: {fileID: 0}
     - target: {fileID: 525835354696689558, guid: e9445c06950a0b046999acceb7541541, type: 3}
       propertyPath: m_LocalRotation.y
@@ -898,8 +898,8 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 525835356066787349, guid: e9445c06950a0b046999acceb7541541, type: 3}
-      propertyPath: rateIncrease
-      value: 100
+      propertyPath: GripLooseThreshold
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 525835356432246988, guid: e9445c06950a0b046999acceb7541541, type: 3}
       propertyPath: near clip plane

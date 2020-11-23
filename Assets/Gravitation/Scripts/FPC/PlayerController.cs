@@ -106,19 +106,19 @@ public class PlayerController : MonoBehaviour
         float CR = gripMeter.currentReading;
         float LT = gripMeter.LowerThreshold;
         float UT = gripMeter.UpperThreshold;
+        float LgT = gripMeter.GripLooseThreshold;
         float RoD = gripMeter.rateDecrease;
+        float LR = gripMeter.lastreading;
         
         if (hang)
         {
             if (CR > LT)
             {
-                Debug.Log("H to TC");
                 _animator.SetTrigger("H to TC");
                 hang = false; tryclimb = true;
             }
-            else if (CR < LT)
+            else if (CR < LgT)
             {
-                Debug.Log("H to GL");
                 _animator.SetTrigger("H to GL");
                 hang = false; griploose = true;
             }
@@ -126,34 +126,47 @@ public class PlayerController : MonoBehaviour
 
         if (griploose)
         {
-            if (CR > LT)
+            if (CR > LgT)
             {
-                Debug.Log("GL to H");
                 _animator.SetTrigger("GL to H");
                 griploose = false; hang = true;
             }
             else if (CR < RoD)
             {
-                Debug.Log("GL to Fall");
                 _animator.SetTrigger("GL to F");
                 griploose = false;
+            }/*
+            else if (CR > LR)
+            {
+                _animator.SetTrigger("GL to H");
             }
+            else if (CR < LR)
+            {
+                _animator.SetTrigger("H to GL");
+            }*/
         }
 
         if (tryclimb)
         {
             if (CR < LT)
             {
-                Debug.Log("TC to H");
                 _animator.SetTrigger("TC to H");
                 tryclimb = false; hang = true;
             }
             else if (CR > UT)
             {
-                Debug.Log("TC to C");
                 _animator.SetTrigger("TC to C");
                 tryclimb = false;
+            }/*
+            else if (CR > LR)
+            {
+                _animator.SetTrigger("H to TC");
             }
+            else if (CR < LR)
+            {
+                _animator.SetTrigger("TC to H");
+                
+            }*/
         }
     }
 
